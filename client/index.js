@@ -29,7 +29,15 @@ function main() {
         user.setFirstName("Nguyen");
         user.setLastName("Duy");
         userRequest.setUser(user);
+
+        const QNRequest = new users.UserRequest();
+        const qn = new users.User();
+        qn.setFirstName("Quynh");
+        qn.setLastName("Nhu");
+        QNRequest.setUser(qn);
+
         call.write(userRequest);
+        call.write(QNRequest);
 
         if(++count > 3) {
             clearInterval(intervalId);
